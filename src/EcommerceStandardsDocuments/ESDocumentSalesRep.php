@@ -9,65 +9,63 @@
 	use EcommerceStandardsDocuments\ESDocument;
 
 	/**
-	* Ecommerce standards document that contains a list of stock quantity records
-	* An example of the Stock Quantity Ecommerce Standards document in its JSON serialised form
+	* Ecommerce standards document that contains a list of sales representative records
+	* 
+	* An example of the Sales Representative Ecommerce Standards document in its JSON serialised form
 	* 
 	*@code 
 	*{
 	*	"resultStatus":"1",
-	*	"message":"The product stock quantity data has been successfully obtained.",
-	*	"configs":{"dataFields":"keyProductID,qtyAvailable,qtyOnHand,qtyOrdered,qtyOrdered,qtyBackordered,qtyReserved,qtyConsigned"},
+	*	"message":"The sales representative data has been successfully obtained.",
+	*	"configs":{"dataFields":"keySalesRepID,name,salesRepCode,contact,isIndividual"},
 	*	"dataTransferMode": "COMPLETE",
 	*	"version": 1.1,
 	*	"totalDataRecords": 3,
 	*	"dataRecords":
 	*	[
 	*		{
-	*			"keyProductID":"123A",
-	*			"qtyAvailable": 22
+	*			"keySalesRepID":"REP-1"
 	*		},
 	*		{
-	*			"keyProductID":"1234",
-	*			"qtyAvailable": 16,
-	*			"qtyOnHand": 20,
-	*			"qtyOrdered": 15,
-	*			"qtyBackordered": 10,
-	*			"qtyReserved": 2,
-	*			"qtyConsigned": 12
+	*			"keySalesRepID":"REP-2",
+	*			"salesRepCode": "JD",
+	*			"contact": "John Doe",
+	*			"isIndividual": "Y"
 	*		},
 	*		{
-	*			"keyProductID":"7890",
-	*			"qtyAvailable": -23,
-	*			"qtyOnHand": 20,
-	*			"qtyOrdered": 15
+	*			"keySalesRepID":"4533",
+	*			"salesRepCode": "AI",
+	*			"name": "Acme Industries",
+	*			"contact": "Kevin Peterson",
+	*			"isIndividual": "N"
 	*		}
 	*	]
 	*}
 	*/
-	class ESDocumentStockQuantity extends ESDocument implements \JsonSerializable
+	class ESDocumentSalesRep extends ESDocument implements \JsonSerializable
 	{
 		/**
-		* @var ESDRecordStockQuantity[] List of stock quantity records
+		* @var ESDRecordSalesRep[] List of sales representative records
 		*/
 		public $dataRecords = array();
 		
 		/**
 		* Constructor
 		* 
-		*  @param resultStatus 			int							status of obtaining the sales order data
-		*  @param message 				string						message to accompany the result status
-		*  @param stockQuantityRecords	ESDRecordStockQuantity[]	list of stock quantity records
-		*  @param configs 				array						A list of key value pairs that contain additional information about the document.
+		*  @param resultStatus 					int							status of obtaining the document's data
+		*  @param message 						string						message to accompany the result status
+		*  @param salesRepresentativeRecords	ESDRecordSalesRep[]			list of sales representative records
+		*  @param configs 						array						A list of key value pairs that contain additional information about the document.
 		*/
-		public function __construct($resultStatus = 0, $message = "", $stockQuantityRecords = array(), $configs = array())
+		public function __construct($resultStatus = 0, $message = "", $salesRepresentativeRecords = array(), $configs = array())
 		{
 			$this->resultStatus = $resultStatus;
 			$this->message = $message;
-			$this->dataRecords = $stockQuantityRecords;
+			$this->dataRecords = $salesRepresentativeRecords;
 			$this->configs = $configs;
-			if ($stockQuantityRecords != null)
+			if ($salesRepresentativeRecords != null)
 			{
-				$this->totalDataRecords = count($stockQuantityRecords);
+				$this->totalDataRecords = count($salesRepresentativeRecords);
 			}
 		}
 		
