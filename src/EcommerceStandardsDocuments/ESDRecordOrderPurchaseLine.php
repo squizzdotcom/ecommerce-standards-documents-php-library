@@ -58,7 +58,22 @@
 		* @var string Key of the location record that the order line is assigned to.
 		*/
 		public $keyLocationID = "";
-
+		
+		/**
+		* @var string key of the external location where the products for the order line can be found. This external location may be the location where goods are being delivered to or held at.
+		*/
+		public $externalKeyLocationID  = "";
+		
+		/**
+		* @var string Code of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+		public $externalLocationCode  = "";
+		
+		/**
+		* @var string Name of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+		public $externalLocationName  = "";
+		
 		/**
 		* @var string United Nations Standard Products and Service Code. Stores a standard code defined by the United Nations classifying objects.
 		*/
@@ -178,7 +193,12 @@
 		* @var string Either N-No, Y-Yes. If 'Y' then indicates that the line has been priced based on the component product of a product kit.
 		*/
 		public $kittedProductSetPrice = "";
-
+		
+		/**
+		* @var string description/comment or any other text to set for a line
+		*/
+		public $textDescription = "";
+		
 		/**
 		* @var string Either N-No, Y-Yes. If 'Y' then indicates quantity in the line should be reserved.
 		*/
@@ -332,6 +352,9 @@
 				'locationCode' => $this->locationCode,
 				'locationName' => $this->locationName,
 				'keyLocationID' => $this->keyLocationID,
+				'externalKeyLocationID' => $this->externalKeyLocationID,
+				'externalLocationCode' => $this->externalLocationCode,
+				'externalLocationName' => $this->externalLocationName,
 				'UNSPSC' => $this->UNSPSC,
 				'language' => $this->language,
 				'quantity' => $this->quantity,
@@ -351,6 +374,7 @@
 				'entitySetPrice' => $this->entitySetPrice,
 				'unitName' => $this->unitName,
 				'keySellUnitID' => $this->keySellUnitID,
+				'textDescription' => $this->textDescription,
 				'sellUnitBaseQuantity' => $this->sellUnitBaseQuantity,
 				'priceReferenceCode' => $this->priceReferenceCode,
 				'priceReferenceType' => $this->priceReferenceType,
@@ -448,6 +472,21 @@
 				$this->keyLocationID = "";
 			}
 			
+			if ($this->externalKeyLocationID == null)
+			{
+				$this->externalKeyLocationID = "";
+			}
+			
+			if ($this->externalLocationCode == null)
+			{
+				$this->externalLocationCode = "";
+			}
+			
+			if ($this->externalLocationName == null)
+			{
+				$this->externalLocationName = "";
+			}
+			
 			if ($this->UNSPSC == null)
 			{
 				$this->UNSPSC = "";
@@ -496,6 +535,11 @@
 			if ($this->keySellUnitID == null)
 			{
 				$this->keySellUnitID = "";
+			}
+			
+			if ($this->textDescription == null)
+			{
+				$this->textDescription = "";
 			}
 			
 			if ($this->productCode == null)

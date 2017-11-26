@@ -1,7 +1,7 @@
 <?php
 
 	/**
-	* Copyright (C) 2017 Squizz PTY LTD
+	* Copyright (C) 2018 Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -176,9 +176,14 @@
 
 		/**
 		* @var string Either 'N'-No or 'Y'-Yes If 'Y' then indicates that if the product is marked as a kit then when its pricing is calculated, that the pricing assigned to the product is for the cost of kit.
-		* If 'N' then indicated that if the product is marked as a kit then when its pricing is calculated, that the price of the product should be calculated by combining the price of all the component products assignd to the kit.
+		* If 'N' then indicates that if the product is marked as a kit then when its pricing is calculated, that the price of the product should be calculated by combining the price of all the component products assignd to the kit.
 		*/
 		public $kitProductsSetPrice = "";
+		
+		/**
+		* @var int Number to order the product by. This may be used to order a number of products within a list.
+		*/
+        public $ordering = 0;
 
 		/**
 		* @var int Data Record OPeration. Denotes an operation that may need to be performed on the record when it is being processed. Set null, or set it to one of the ESD_RECORD_OPERATION constants in the ESDocumentConstants class to allow the record to be inserted, updated, deleted, or ignored.

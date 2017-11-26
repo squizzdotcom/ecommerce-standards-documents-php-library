@@ -571,6 +571,21 @@
 		* @var string Either 'N'-No or 'Y'-Yes, If 'Y' then indicates that the ordered goods are to be obtained across multiple locations.
 		*/
 		public $isMultiLocation = "";
+		
+		/**
+		* @var string key of the external location where the products for the order can be found. This external location may be the location where goods are being delivered to or held at.
+		*/
+        public $externalKeyLocationID = "";
+        
+        /**
+		* @var string Code of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+        public $externalLocationCode = "";
+        
+        /**
+		* @var string Name of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+        public $externalLocationName = "";
 
 		/**
 		* @var string Method that the order is being shipped by
@@ -1008,6 +1023,21 @@
 			if ($isMultiLocation == null)
 			{
 				$this->isMultiLocation = ESDocumentConstants::ESD_VALUE_NO;
+			}
+			
+			if ($externalKeyLocationID == null)
+			{
+				$this->externalKeyLocationID = "";
+			}
+			
+			if ($externalLocationCode == null)
+			{
+				$this->externalLocationCode = "";
+			}
+			
+			if ($externalLocationName == null)
+			{
+				$this->externalLocationName = "";
 			}
 			
 			if ($shippingMethod == null)

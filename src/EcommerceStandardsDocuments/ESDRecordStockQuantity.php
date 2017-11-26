@@ -43,6 +43,11 @@
 		* @var double Unit quantity of stock that has been ordered by a purchaser
 		*/
 		public $qtyOrdered = 0.0;
+		
+        /**
+		* @var double Unit quantity of stock that is the maximum amount that can be ordered by a purchaser
+		*/
+        public $qtyOrderable = 0.0;
 
 		/**
 		* @var double Unit quantity of stock that has been back ordered from a supplier

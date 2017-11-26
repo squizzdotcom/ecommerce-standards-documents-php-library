@@ -119,7 +119,7 @@
 		/**
 		* Contains the version that the Ecommerce Standards Documents library is currently at.
 		*/
-		const ESD_DOCUMENT_VERSION = 1.1;
+		const ESD_DOCUMENT_VERSION = 1.2;
 		/**
 		* Denotes that the location is a warehouse
 		*/
@@ -137,6 +137,18 @@
 		*/
 		const LOCATION_TYPE_OFFICE = "OFFICE";
 		/**
+		* Location is the main head office of an organisational entity
+		*/
+		const LOCATION_TYPE_HEAD_OFFICE = "HEAD_OFFICE";
+		/**
+		* Location is external to an organisation and may be owned or run by a separate entity
+		*/
+		const LOCATION_TYPE_THIRD_PARTY = "THIRD_PARTY";
+		/**
+		* The location type is not specified
+		*/
+		const LOCATION_TYPE_OTHER = "OTHER";
+		/**
 		* Language - English Australia
 		*/
 		const LANG_EN_AU = "EN_AU";
@@ -144,6 +156,10 @@
 		* Language - English USA
 		*/
 		const LANG_EN_US = "EN_US";
+		/**
+		* Language - French France
+		*/
+		const LANG_FR_FR = "FR_FR";
 		/**
 		* Authority Number - Australian Business Number
 		*/
@@ -276,6 +292,10 @@
 		* Record Type - Payment
 		*/
 		const RECORD_TYPE_PAYMENT = "PAYMENT";
+		/**
+		* Record Type - Quote
+		*/
+		const RECORD_TYPE_QUOTE = "QUOTE";
 		/**
 		* Record Line Type - Item
 		*/

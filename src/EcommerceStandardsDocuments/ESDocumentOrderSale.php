@@ -121,6 +121,9 @@
 	*			"locationCode":"LCT-456",
 	*			"locationName":"Warehouse",
 	*			"isMultiLocation":"N",
+	*			"externalKeyLocationID":"111",
+    *			"externalLocationCode":"CUSTOMERA-STORE",
+    *			"externalLocationName":"Customer A Store",
 	*			"shippingMethod":"N",
 	*			"isProductsDelivered":"N",
 	*			"lines":
@@ -231,7 +234,7 @@
 	*				{
 	*					"lineType":"DOWNLOAD",
 	*					"purchaseOrderLineCode": "SWISH-002",
-	*					"purchaseOrderLineNumber": "1",
+	*					"purchaseOrderLineNumber": "3",
 	*					"language": "EN_AU",
 	*					"quantity": 1,
 	*					"priceExTax": 20.00,
@@ -265,7 +268,7 @@
 	*				{
 	*					"lineType":"LABOUR",
 	*					"purchaseOrderLineCode": "SWISH-002",
-	*					"purchaseOrderLineNumber": "1",
+	*					"purchaseOrderLineNumber": "4",
 	*					"language": "EN_AU",
 	*					"quantity": 1,
 	*					"priceExTax": 40.00,
@@ -295,6 +298,13 @@
 	*							"priceTotalTax": 4.00
 	*						}
 	*					]
+	*				},
+	*				{
+	*					"lineType":"TEXT",
+	*					"purchaseOrderLineCode": "SWISH-005",
+	*					"purchaseOrderLineNumber": "5",
+	*					"language": "EN_AU",
+	*					"labourDescription": "Payment for order will be placed after goods and services have been delivered."
 	*				}
 	*			],
 	*			"surcharges":

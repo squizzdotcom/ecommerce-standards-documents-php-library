@@ -59,6 +59,21 @@
 		* @var string Key of the location record that the order line is assigned to.
 		*/
 		public $keyLocationID = "";
+		
+		/**
+		* @var string key of the external location where the products for the order line can be found. This external location may be the location where goods are being delivered to or held at.
+		*/
+		public $externalKeyLocationID = "";
+		
+		/**
+		* @var string Code of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+		public $externalLocationCode = "";
+		
+		/**
+		* @var string Name of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+		public $externalLocationName = "";
 
 		/**
 		* @var string United Nations Standard Products and Service Code. Stores a standard code defined by the United Nations classifying objects.
@@ -184,6 +199,11 @@
 		* @var string Either N-No, Y-Yes If 'Y' then indicates quantity in the line should be reserved.
 		*/
 		public $isReserved = "";
+		
+		/**
+		* @var string description/comment or any other text to set for a line
+		*/
+		public $textDescription = "";
 
 		/**
 		* @var string Key of the product record associated to the line. Only relevent when the lineType has been  to product
@@ -396,6 +416,11 @@
 				$this->isReserved = ESDocumentConstants::ESD_VALUE_NO;
 			}
 			
+			if ($this->textDescription == null)
+			{
+				$this->textDescription = "";
+			}
+			
 			if ($this->productCode == null)
 			{
 				$this->productCode = "";
@@ -464,6 +489,21 @@
 			if ($this->keyLocationID == null)
 			{
 				$this->keyLocationID = "";
+			}
+			
+			if ($this->externalKeyLocationID == null)
+			{
+				$this->externalKeyLocationID = "";
+			}
+			
+			if ($this->externalLocationCode == null)
+			{
+				$this->externalLocationCode = "";
+			}
+			
+			if ($this->externalLocationName == null)
+			{
+				$this->externalLocationName = "";
 			}
 			
 			if ($this->UNSPSC == null)

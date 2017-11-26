@@ -58,6 +58,7 @@
 	* 			"isKitted":"N",
 	* 			"kitProductsSetPrice":"N",
 	* 			"keySellUnitID": 2,
+	* 			"ordering": 1,
 	* 			"sellUnits":[
 	* 				{
 	* 					"keySellUnitID":"2"

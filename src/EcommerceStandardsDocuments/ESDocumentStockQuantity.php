@@ -31,6 +31,7 @@
 	*			"qtyAvailable": 16,
 	*			"qtyOnHand": 20,
 	*			"qtyOrdered": 15,
+	*			"qtyOrderable": 1000,
 	*			"qtyBackordered": 10,
 	*			"qtyReserved": 2,
 	*			"qtyConsigned": 12

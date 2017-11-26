@@ -582,6 +582,21 @@
 		* @var string Either 'N'-No or 'Y'-Yes If 'Y' then indicates that the ordered goods are to be obtained across multiple locations.
 		*/
 		public $isMultiLocation = "";
+		
+		/**
+		* @var string key of the external location where the products for the order can be found. This external location may be the location where goods are being delivered to or held at.
+		*/
+        public $externalKeyLocationID = "";
+        
+        /**
+		* @var string Code of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+        public $externalLocationCode = "";
+        
+        /**
+		* @var string Name of the external location. This external location may be the location where goods are being delivered to or held at.
+		*/
+        public $externalLocationName = "";
 
 		/**
 		* @var string Method that the order is being shipped by
@@ -728,6 +743,9 @@
 				'locationCode' => $this->locationCode,
 				'locationName' => $this->locationName,
 				'isMultiLocation' => $this->isMultiLocation,
+				'externalKeyLocationID' => $this->externalKeyLocationID,
+				'externalLocationCode' => $this->externalLocationCode,
+				'externalLocationName' => $this->externalLocationName,
 				'shippingMethod' => $this->shippingMethod,
 				'accountDiscountRate' => $this->accountDiscountRate,
 				'accountTerritory' => $this->accountTerritory,
