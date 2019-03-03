@@ -1,6 +1,6 @@
 <?php
 	/**
-	* Copyright (C) 2018 Squizz PTY LTD
+	* Copyright (C) 2019 Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -14,7 +14,7 @@
 	* 
 	*@code 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry transaction data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -109,7 +109,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of invoices for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry invoice data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -146,7 +146,7 @@
 	*             "referenceKeyID": "ORDER-123",
 	*             "referenceType": "ORDER",
 	*             "referenceNumber": "123-1234123",
-	*             "customerReference": "1234123",
+	*             "customerReference": "PO-12345",
 	*             "salesRepCode": "JD",
 	*             "salesRepName": "John Doe",
 	*             "deliveryContact": "Lee",
@@ -204,7 +204,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single invoice for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry invoice detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -230,7 +230,7 @@
 	*             "referenceKeyID": "ORDER-123",
 	*             "referenceType": "ORDER",
 	*             "referenceNumber": "123-1234123",
-	*             "customerReference": "1234123",
+	*             "customerReference": "PO-12345",
 	*             "salesRepCode": "JD",
 	*             "salesRepName": "John Doe",
 	*             "deliveryContact": "Lee",
@@ -323,7 +323,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of sales orders for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry sales order data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -360,7 +360,7 @@
 	*             "referenceKeyID": "112",
 	*             "referenceType": "INVOICE",
 	*             "referenceNumber": "1234123",
-	*             "customerReference": "3434343",
+	*             "customerReference": "PO-12345",
 	*             "salesRepCode": "JD",
 	*             "salesRepName": "John Doe",
 	*             "deliveryContact": "Lee",
@@ -418,7 +418,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single sales order for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry sales order detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -444,7 +444,7 @@
 	*             "referenceKeyID": "112",
 	*             "referenceType": "INVOICE",
 	*             "referenceNumber": "1234123",
-	*             "customerReference": "3434343",
+	*             "customerReference": "PO-12345",
 	*             "salesRepCode": "JD",
 	*             "salesRepName": "John Doe",
 	*             "deliveryContact": "Lee",
@@ -537,7 +537,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of credits for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry credit data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -571,7 +571,7 @@
 	*             "referenceKeyID": "112",
 	*             "referenceType": "INVOICE",
 	*             "referenceNumber": "1234123",
-	*             "customerReference": "7656456",
+	*             "customerReference": "PO-12345",
 	*             "salesRepCode": "JD",
 	*             "salesRepName": "John Doe",
 	*             "billingContact": "Tom",
@@ -602,7 +602,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single credit for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry credit detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -626,7 +626,7 @@
 	*             "referenceKeyID": "112",
 	*             "referenceType": "INVOICE",
 	*             "referenceNumber": "1234123",
-	*             "customerReference": "7656456",
+	*             "customerReference": "PO-12345",
 	*             "salesRepCode": "JD",
 	*             "salesRepName": "John Doe",
 	*             "billingContact": "Tom",
@@ -684,7 +684,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of payments for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry payment data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -724,7 +724,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single payment for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry payment detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -776,7 +776,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of back orders for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry back order data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -861,7 +861,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single back order for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry back order detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -971,13 +971,13 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of quotes for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry quote data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
 	*     "totalDataRecords": 2,
 	*     "configs":{},
-	*     "orderSaleRecords":
+	*     "quoteRecords":
 	*      [
 	*         {
 	*             "keyQuoteID":"11",
@@ -1065,13 +1065,13 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single quote for a customer account
 	* 
 	* {
-	*     "version": 1.2,
+	*     "version": 1.3,
 	*     "resultStatus": 1,
-	*     "message":"The customer account enquiry sales order detail data has been successfully obtained.",
+	*     "message":"The customer account enquiry quote detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
 	*     "totalDataRecords": 1,
 	*     "configs":{},
-	*     "orderSaleRecords":
+	*     "quoteRecords":
 	*      [
 	*         {
 	*             "keyQuoteID":"112",

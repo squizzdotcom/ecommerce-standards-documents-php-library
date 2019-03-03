@@ -1,7 +1,6 @@
 <?php
-
 	/**
-	* Copyright (C) 2017 Squizz PTY LTD
+	* Copyright (C) 2019 Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -328,6 +327,21 @@
 		* @var string code of the labour in the purchase order associated to the sales order
 		*/
 		public $salesOrderLabourCode = "";
+		
+		/**
+		* @var string Key of the general ledger account that the line is assigned to. This links the invoice line to the general ledger account that the purchase may be reported against for accounting purposes.
+		*/
+		public $keyGLAccountID = "";
+		
+		/**
+		* @var string Code of the general ledger account that the line is assigned to. The code can be used to identify the general ledger account that the purchase may be reported against for accounting purposes.
+		*/
+		public $glAccountCode = "";
+		
+		/**
+		* @var string Name of the general ledger account that the line is assigned to. The name can be used to identify the general ledger account that the purchase may be reported against for accounting purposes.
+		*/
+		public $glAccountName = "";
 
 		/**
 		* @var int Data Record OPeration. Denotes an operation that may need to be performed on the record when it is being processed.
@@ -657,10 +671,25 @@
 				$this->isReserved = ESDocumentConstants::ESD_VALUE_NO;
 			}
 			
+			if ($this->keyGLAccountID == null)
+			{
+				$this->keyGLAccountID = "";
+			}
+			
+			if ($this->glAccountCode == null)
+			{
+				$this->glAccountCode = "";
+			}
+			
+			if ($this->glAccountName == null)
+			{
+				$this->glAccountName = "";
+			}
+			
 			if ($this->internalID == null)
 			{
 				$this->internalID = "";
-			}         
+			}
 		}
 	}
 ?>

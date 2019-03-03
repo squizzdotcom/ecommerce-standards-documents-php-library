@@ -1,7 +1,7 @@
 <?php
 
 	/**
-	* Copyright (C) 2017 Squizz PTY LTD
+	* Copyright (C) 2019 Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -14,11 +14,11 @@
 	* An example of the Product Ecommerce Standards document in its JSON serialised form
 	* @code 
 	* {
+	* 	"version": 1.3,
 	*	"resultStatus":"1",
 	* 	"message":"The product data has been successfully obtained.",
 	* 	"configs":{"dataFields":"keyProductID,productCode,keyTaxcodeID,productSearchCode,barcode,barcodeInner,brand,name,description1,description2,description3,description4,productClass,keySellUnitID,unit,weight,width,height,depth,averageCost,warehouse,supplier,deliveryTimeNoStock,deliveryTimeInStock,stockQuantity,stockNoneQuantity,stockLowQuantity,stockLowQuantity,isPriceTaxInclusive,isKitted,kitProductsSetPrice"},
 	* 	"dataTransferMode": "COMPLETE",
-	* 	"version": 1.1,
 	* 	"totalDataRecords": 2,
 	* 	"dataRecords":
 	* 	[

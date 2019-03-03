@@ -1,6 +1,6 @@
 <?php
 	/**
-	* Copyright (C) 2017 Squizz PTY LTD
+	* Copyright (C) 2019 Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -15,38 +15,44 @@
 	* 
 	*@code 
 	*{
+	*	"version": 1.3,
 	*	"resultStatus":"1",
 	*	"message":"The product price-level pricing data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyProductID,keyPriceLevelID,keySellUnitID,price"},
 	*	"dataTransferMode": "COMPLETE",
-	*	"version": 1.1,
-	*	"totalDataRecords": 4,
+	*	"totalDataRecords": 5,
 	*	"dataRecords":
 	*	[
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-001",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"price": 10.00
 	*		},
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-002",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"price": 8.00
 	*		},
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-003",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"price": 5.00
 	*		},
 	*		{
 	*			"keyProductID":"PROD-456",
 	*			"keyPriceLevelID":"PL-001",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"price": 22.00
-	*		}
+	*		},
+	*		{
+	*			"keyProductID":"PROD-456",
+	*			"keyPriceLevelID":"PL-001",
+	*			"keySellUnitID": "PACK",
+	*			"price": 80.00
+    *		}
 	*	]
 	*}
 	*
@@ -54,35 +60,39 @@
 	*
 	*@code 
 	*{
+	*	"version": 1.3,
 	*	"resultStatus":"1",
 	*	"message":"The product price-level quantity break pricing data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyProductID,keyPriceLevelID,price,quantity"},
 	*	"dataTransferMode": "COMPLETE",
-	*	"version": 1.0,
 	*	"totalDataRecords": 4,
 	*	"dataRecords":
 	*	[
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-001",
+	*			"keySellUnitID": "EACH",
 	*			"price": 10.00,
 	*			"quantity": 5
 	*		},
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-001",
+	*			"keySellUnitID": "EACH",
 	*			"price": 5.00,
 	*			"quantity": 10
 	*		},
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-001",
+	*			"keySellUnitID": "EACH",
 	*			"price": 2.00,
 	*			"quantity": 20
 	*		},
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-002",
+	*			"keySellUnitID": "EACH",
 	*			"price": 4.10,
 	*			"quantity": 5
 	*		}
@@ -93,17 +103,18 @@
 	*
 	*@code 
 	*{
+	*	"version": 1.3,
 	*	"resultStatus":"1",
 	*	"message":"The product customer account pricing data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyProductID,keyAccountID,price,quantity,referenceID,referenceType"},
 	*	"dataTransferMode": "COMPLETE",
-	*	"version": 1.0,
 	*	"totalDataRecords": 4,
 	*	"dataRecords":
 	*	[
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyAccountID":"ACC-123",
+	*			"keySellUnitID": "EACH",
 	*			"price": 70.00,
 	*			"quantity": 5,
 	*			"referenceID": "FORCED-CONTRACT-1",
@@ -112,6 +123,7 @@
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyAccountID":"ACC-123",
+	*			"keySellUnitID": "EACH",
 	*			"price": 1.00,
 	*			"quantity": 20,
 	*			"referenceID": "FORCED-CONTRACT-1",
@@ -120,6 +132,7 @@
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyAccountID":"ACC-456",
+	*			"keySellUnitID": "EACH",
 	*			"price": 7.30,
 	*			"quantity": 1,
 	*			"referenceID": "CONTRACT-222",
@@ -128,6 +141,7 @@
 	*		{
 	*			"keyProductID":"PROD-456",
 	*			"keyAccountID":"ACC-456",
+	*			"keySellUnitID": "EACH",
 	*			"price": 3.30
 	*		}
 	*	]
@@ -137,11 +151,11 @@
 	*
 	*@code 
 	*{
+	*	"version": 1.3,
 	*	"resultStatus":"1",
 	*	"message":"The product customer account pricing data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyProductID,keyPriceGroupID,keySellUnitID,price,quantity,referenceID,referenceType"},
 	*	"dataTransferMode": "COMPLETE",
-	*	"version": 1.0,
 	*	"totalDataRecords": 4,
 	*	"priceGroups":
 	*	{
@@ -151,26 +165,26 @@
 	*	"dataRecords":
 	*	[
 	*		{
-	*		"keyProductID":"PROD-123",
-	*		"keyPriceGroupID":"PRICE-GROUP-1",
-	*		"price": 3.30,
-	*		"quantity": 1
+	*			"keyProductID":"PROD-123",
+	*			"keyPriceGroupID":"PRICE-GROUP-1",
+	*			"price": 3.30,
+	*			"quantity": 1
 	*		},
 	*		{
-	*		"keyProductID":"PROD-123",
-	*		"keyPriceGroupID":"PRICE-GROUP-2",
-	*		"keySellUnitID": 1,
-	*		"price": 2.90,
-	*		"quantity": 1,
-	*		"referenceID": "FORCED-CONTRACT-1",
-	*		"referenceType": "CF"
+	*			"keyProductID":"PROD-123",
+	*			"keyPriceGroupID":"PRICE-GROUP-2",
+	*			"keySellUnitID": "1",
+	*			"price": 2.90,
+	*			"quantity": 1,
+	*			"referenceID": "FORCED-CONTRACT-1",
+	*			"referenceType": "CF"
 	*		},
 	*		{
-	*		"keyProductID":"PROD-456",
-	*		"keyPriceGroupID":"PRICE-GROUP-2",
-	*		"keySellUnitID": 1,
-	*		"price": 0.255,
-	*		"quantity": 50
+	*			"keyProductID":"PROD-456",
+	*			"keyPriceGroupID":"PRICE-GROUP-2",
+	*			"keySellUnitID": "EACH",
+	*			"price": 0.255,
+	*			"quantity": 50
 	*		}
 	*	]
 	*}
@@ -179,38 +193,38 @@
 	*
 	*@code 
 	*{
+	*	"version": 1.3,
 	*	"resultStatus":"1",
 	*	"message":"The product price-level pricing data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyProductID,keyPriceLevelID,keySellUnitID,drop"},
 	*	"dataTransferMode": "INCREMENT",
-	*	"version": 1.0,
 	*	"totalDataRecords": 5,
 	*	"dataRecords":
 	*	[
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-006",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"price": 22.00,
 	*			"drop": 1
 	*		},
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-002",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"price": 11.00,
 	*			"drop": 2
 	*		},
 	*		{
 	*			"keyProductID":"PROD-123",
 	*			"keyPriceLevelID":"PL-003",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"drop": 3
 	*		},
 	*		{
 	*			"keyProductID":"PROD-456",
 	*			"keyPriceLevelID":"PL-001",
-	*			"keySellUnitID": 1,
+	*			"keySellUnitID": "EACH",
 	*			"drop": 4
 	*		}
 	*	]
