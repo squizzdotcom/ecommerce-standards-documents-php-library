@@ -76,7 +76,7 @@
 		* 
 		*  @param resultStatus 			int							status of obtaining the document's data
 		*  @param message 				string						message to accompany the result status
-		*  @param alternateCodeRecords	ESDRecordCategory[]			list of category records
+		*  @param categoryRecords		ESDRecordCategory[]			list of category records
 		*  @param configs 				array						A list of key value pairs that contain additional information about the document.
 		*/
 		public function __construct($resultStatus = 0, $message = "", $categoryRecords = array(), $configs = array())
@@ -89,6 +89,23 @@
 			{
 				$this->totalDataRecords = count($categoryRecords);
 			}
+		}
+		
+				
+		/**
+		* serializes the class's properties into JSON, orders properties and filters properties with default values from being returned.
+		*/
+		public function jsonSerialize()
+		{
+			return array_filter([
+				'version' => $this->version,
+				'resultStatus' => $this->resultStatus,
+				'message' => $this->message,
+				'dataTransferMode' => $this->dataTransferMode,
+				'totalDataRecords' => $this->totalDataRecords,
+				'configs' => $this->configs,
+				'dataRecords' => array_filter($this->dataRecords)
+			]);
 		}
 	}
 ?>
