@@ -1,7 +1,7 @@
 <?php
 
 	/**
-	* Copyright (C) 2019 Squizz PTY LTD
+	* Copyright (C) Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -135,5 +135,10 @@
 		* @var ESDRecordStockQuantity[] list of products stock level records that denote the products assigned to the location, and the quantity of product stock available for each
 		*/
 		public $productStock = array();
+
+		/**
+		* @var ESDRecordAttributeValue[] list of attributes and values associated to the location. This allows almost any kind of data to be set against the location in the form of attribute key value pairs
+		*/
+		public $attributes = array();
 	}
 ?>

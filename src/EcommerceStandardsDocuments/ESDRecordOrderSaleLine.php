@@ -255,27 +255,27 @@
 		public $weight = 0;
 
 		/**
-		* @var string Code of the product's width measurement to define the unit of measurement.
+		* @var string Code of the product's width measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_LENGTH_ in the ESDocumentConstants class
 		*/
 		public $widthUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's height measurement to define the unit of measurement.
+		* @var string Code of the product's height measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_LENGTH_ in the ESDocumentConstants class
 		*/
 		public $heightUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's depth measurement to define the unit of measurement.
+		* @var string Code of the product's depth measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_LENGTH_ in the ESDocumentConstants class
 		*/
 		public $depthUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's volume measurement to define the unit of measurement.
+		* @var string Code of the product's volume measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_VOLUME_ in the ESDocumentConstants class
 		*/
 		public $volumeUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's weight measurement to define the unit of measurement.
+		* @var string Code of the product's weight measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_MASS_ in the ESDocumentConstants class
 		*/
 		public $weightUnitMeasureCode = "";
 

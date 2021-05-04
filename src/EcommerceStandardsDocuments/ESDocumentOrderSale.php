@@ -16,7 +16,7 @@
 	* 
 	* @code 
 	*{
-	*	"version": 1.3,
+	*	"version": 1.4,
 	*	"resultStatus":"1",
 	*	"message":"The sales order data has been successfully obtained.",
 	*	"configs":{},
@@ -99,7 +99,7 @@
 	*			"totalWeight": 35,
 	*			"totalVolume": 10,
 	*			"totalVolumeMeasureCode": "KG",
-	*			"totalWeightMeasureCode":"METRES-CUBED",
+	*			"totalWeightMeasureCode":"M3",
 	*			"totalSurchargeItems": 1,
 	*			"totalSurchargeExTax": 20.00,
 	*			"totalSurchargeIncTax": 22.00,
@@ -170,10 +170,10 @@
 	*					"depth": 29.7,
 	*					"volume": 10,
 	*					"weight": 10.00,
-	*					"widthUnitMeasureCode": "METRES",
-	*					"heightUnitMeasureCode": "METRES",
-	*					"depthUnitMeasureCode": "METRES",
-	*					"volumeUnitMeasureCode": "METRES-CUBED",
+	*					"widthUnitMeasureCode": "M",
+	*					"heightUnitMeasureCode": "M",
+	*					"depthUnitMeasureCode": "M",
+	*					"volumeUnitMeasureCode": "M3",
 	*					"weightUnitMeasureCode": "KG",
 	*					"taxes":
 	*					[

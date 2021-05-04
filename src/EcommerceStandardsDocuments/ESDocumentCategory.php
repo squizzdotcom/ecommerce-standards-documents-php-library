@@ -1,6 +1,6 @@
 <?php
 	/**
-	* Copyright (C) 2019 Squizz PTY LTD
+	* Copyright (C) Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -13,12 +13,29 @@
 	* An example of the Category Ecommerce Standards document in its JSON serialised form
 	* @code 
 	* {
-	*     "version": 1.3,
+	*     "version": 1.4,
 	*     "resultStatus": 1,
 	*     "message":"The category data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
 	*     "totalDataRecords": 3,
-	*     "configs":{"dataFields":"keyCategoryID,categoryCode,keyCategoryParentID,name,description1,description2,description3,description4,metaTitle,metaKeywords,metaDescription,ordering"},
+	*     "configs":{
+	*         "dataFieldsCategoryTree":"keyCategoryTreeID,categoryTreeCode,name,description,ordering",
+	*         "dataFields":"keyCategoryID,categoryCode,keyCategoryParentID,name,description1,description2,description3,description4,metaTitle,metaKeywords,metaDescription,ordering"
+	*     },
+	*     "categoryTreeRecords":
+	*     [
+	*         {
+	*             "keyCategoryTreeID":"1",
+	*             "name":"Product Catalogue",
+	*         },
+	*         {
+	*             "keyCategoryTreeID":"2-BRANDS",
+	*             "categoryTreeCode":"BRANDS",
+	*             "name":"Product Brands",
+	*             "description":"View all the brands of products we sell.",
+	*             "ordering":2
+	*         }
+	*     ],
 	*     "dataRecords":
 	*      [
 	*         {
@@ -28,8 +45,8 @@
 	*         {
 	*             "keyCategoryID":"123",
 	*             "categoryCode":"tables-chairs",
+	*             "keyCategoryTreeID":"1",
 	*             "keyCategoryParentID":"2",
-	*             "keyCategoryTreeID":"Main-Catalogue",
 	*             "name":"Tables and Chairs",
 	*             "description1":"View our extensive range of tables and chairs",
 	*             "description2":"Range includes products from the ESD designers",
@@ -46,8 +63,8 @@
 	*         {
 	*             "keyCategoryID":"124",
 	*             "categoryCode":"paper",
+	*             "keyCategoryTreeID":"1",
 	*             "keyCategoryParentID":"2",
-	*             "keyCategoryTreeID":"Main-Catalogue",
 	*             "name":"Paper Products",
 	*             "description1":"View our extensive range of paper",
 	*             "description2":"Range includes paper only sources from sustainable environments",
@@ -60,12 +77,35 @@
 	*             "keyProductIDs":["PROD-001","PROD-002"],
 	*             "keyDownloadIDs":["DOWN-1", "DOWN-2","DOWN-3"],
 	*             "keyLabourIDs":[]
+	*         },
+	*         {
+	*             "keyCategoryID":"124",
+	*             "categoryCode":"acme-brand",
+	*             "keyCategoryTreeID":"2-BRANDS",
+	*             "keyCategoryParentID":null,
+	*             "name":"Paper Products",
+	*             "description1":"View All Acme Brand's products",
+	*             "description2":"Range shows all products made by the Acme corporation.",
+	*             "description3":"",
+	*             "description4":"",
+	*             "metaTitle":"Acme Products",
+	*             "metaKeywords":"",
+	*             "metaDescription":"",
+	*             "ordering": 1,
+	*             "keyProductIDs":["PROD-003","PROD-004"],
+	*             "keyDownloadIDs":[],
+	*             "keyLabourIDs":[]
 	*         }
 	*     ]
 	* }
 	*/
 	class ESDocumentCategory extends ESDocument implements \JsonSerializable
 	{
+		/**
+		* @var ESDRecordCategoryTree[] List of category tree records
+		*/
+        public $categoryTreeRecords = array();
+
 		/**
 		* @var ESDRecordCategory[] List of category records
 		*/
@@ -91,7 +131,6 @@
 			}
 		}
 		
-				
 		/**
 		* serializes the class's properties into JSON, orders properties and filters properties with default values from being returned.
 		*/
@@ -104,6 +143,7 @@
 				'dataTransferMode' => $this->dataTransferMode,
 				'totalDataRecords' => $this->totalDataRecords,
 				'configs' => $this->configs,
+				'categoryTreeRecords' => array_filter($this->categoryTreeRecords),
 				'dataRecords' => array_filter($this->dataRecords)
 			]);
 		}

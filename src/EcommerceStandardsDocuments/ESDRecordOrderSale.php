@@ -19,7 +19,7 @@
 		*/
 		const PAYMENT_METHOD_UNPAID = "UNPAID";
 		/**
-		* CREDIT - A payment was made with a credit card
+		* CREDITCARD - A payment was made with a credit card
 		*/
 		const PAYMENT_METHOD_CREDIT = "CREDITCARD";
 		/**
@@ -607,12 +607,12 @@
 		public $isProductsDelivered = "";
 
 		/**
-		* @var string Code of the unit of measure for the volume
+		* @var string Code of the unit of measure for the volume. Set it to a constant prefixed with UNIT_MEASURE_VOLUME_ in the ESDocumentConstants class
 		*/
 		public $totalVolumeMeasureCode = "";
 
 		/**
-		* @var string Code of the unit of measure for the weight
+		* @var string Code of the unit of measure for the weight. Set it to a constant prefixed with UNIT_MEASURE_MASS_ in the ESDocumentConstants class
 		*/
 		public $totalWeightMeasureCode = "";
 
@@ -962,6 +962,11 @@
 			if ($paymentReceipt == null)
 			{
 				$this->paymentReceipt = "";
+			}
+
+			if ($keyPaymentTypeID == null)
+			{
+				$this->keyPaymentTypeID = "";
 			}
 			
 			if ($freightCarrierCode == null)

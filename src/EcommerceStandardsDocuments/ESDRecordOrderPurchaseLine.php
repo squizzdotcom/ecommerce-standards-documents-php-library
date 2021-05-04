@@ -1,6 +1,6 @@
 <?php
 	/**
-	* Copyright (C) 2019 Squizz PTY LTD
+	* Copyright (C) Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -254,27 +254,27 @@
 		public $weight = 0;
 
 		/**
-		* @var string Code of the product's width measurement to define the unit of measurement.
+		* @var string Code of the product's width measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_LENGTH_ in the ESDocumentConstants class
 		*/
 		public $widthUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's height measurement to define the unit of measurement.
+		* @var string Code of the product's height measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_LENGTH_ in the ESDocumentConstants class
 		*/
 		public $heightUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's depth measurement to define the unit of measurement.
+		* @var string Code of the product's depth measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_LENGTH_ in the ESDocumentConstants class
 		*/
 		public $depthUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's volume measurement to define the unit of measurement.
+		* @var string Code of the product's volume measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_VOLUME_ in the ESDocumentConstants class
 		*/
 		public $volumeUnitMeasureCode = "";
 
 		/**
-		* @var string Code of the product's weight measurement to define the unit of measurement.
+		* @var string Code of the product's weight measurement to define the unit of measurement. Set it to a constant prefixed with UNIT_MEASURE_MASS_ in the ESDocumentConstants class
 		*/
 		public $weightUnitMeasureCode = "";
 		
