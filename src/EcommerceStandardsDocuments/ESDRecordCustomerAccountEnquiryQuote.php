@@ -1,6 +1,6 @@
 <?php
 	/**
-	* Copyright (C) 2019 Squizz PTY LTD
+	* Copyright (C) Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 	* This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
 	* You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses/.
@@ -36,19 +36,19 @@
 		/**
 		* @var int Date that the quote record was created. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
 		*/
-		public long creationDate = 0;
+		public $creationDate = 0;
 		/**
 		* @var int Date set to the quote. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
 		*/
-		public long quoteDate = 0;
+		public $quoteDate = 0;
 		/**
 		* @var int Date that the quote expires is no longer valid. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
 		*/
-		public long expiryDate = 0;
+		public $expiryDate = 0;
 		/**
 		* @var int Date that the quoted goods/services are expected to be delivered. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
 		*/
-		public long expectedDeliveryDate = 0;
+		public $expectedDeliveryDate = 0;
 		/**
 		* @var string Key of the location record associated to the quote.
 		*/
@@ -180,59 +180,59 @@
 		/**
 		* @var double Percentage amount of tax that the applied to the quote's total
 		*/
-		public decimal taxRate = 0.0;
+		public $taxRate = 0.0;
 		/**
 		* @var double Total monetary amount of the quote excluding taxes
 		*/
-		public decimal totalExTax = 0.0;
+		public $totalExTax = 0.0;
 		/**
 		* @var double Total monetary amount of the quote including taxes
 		*/
-		public decimal totalIncTax = 0.0;
+		public $totalIncTax = 0.0;
 		/**
 		* @var double Total monetary amount of tax applied to the quote's total
 		*/
-		public decimal totalTax = 0.0;
+		public $totalTax = 0.0;
 		/**
 		* @var double Total monetary amount of freight inclusive of tax applied to the quote's total
 		*/
-		public decimal totalFreightIncTax = 0.0;
+		public $totalFreightIncTax = 0.0;
 		/**
 		* @var double Total monetary amount of freight excluding tax applied to the quote's total
 		*/
-		public decimal totalFreightExTax = 0.0;
+		public $totalFreightExTax = 0.0;
 		/**
 		* @var double Total monetary amount of extra charges inclusive of tax applied to the quote's total
 		*/
-		public decimal totalExtraChargesIncTax = 0.0;
+		public $totalExtraChargesIncTax = 0.0;
 		/**
 		* @var double Total monetary amount of extra charges exclusive of tax applied to the quote's total
 		*/
-		public decimal totalExtraChargesExTax = 0.0;
+		public $totalExtraChargesExTax = 0.0;
 		/**
 		* @var double Total monetary amount of discounts inclusive of tax discounted off the quote's total
 		*/
-		public decimal totalDiscountsIncTax = 0.0;
+		public $totalDiscountsIncTax = 0.0;
 		/**
 		* @var double Total monetary amount of discounts exclusive of tax discounted off the quote's total
 		*/
-		public decimal totalDiscountsExTax = 0.0;
+		public $totalDiscountsExTax = 0.0;
 		/**
 		* @var double Total monetary amount of levies inclusive of tax applied to the quote's total
 		*/
-		public decimal totalLeviesIncTax = 0.0;
+		public $totalLeviesIncTax = 0.0;
 		/**
 		* @var double Total monetary amount of levies exclusive of tax applied to the quote's total
 		*/
-		public decimal totalLeviesExTax = 0.0;
+		public $totalLeviesExTax = 0.0;
 		/**
 		* @var double Total monetary amount paid for the quote
 		*/
-		public decimal totalPaid = 0.0;
+		public $totalPaid = 0.0;
 		/**
 		* @var double Total monetary amount still to be paid for the quote
 		*/
-		public decimal balance = 0.0;
+		public $balance = 0.0;
 		/**
 		* @var string ISO currency code that denotes the currency that all monetary amounts stored in the quote with
 		*/
@@ -240,7 +240,7 @@
 		/**
 		* @var double Total quantity across all the quote lines
 		*/
-		public decimal totalQuantity = 0.0;
+		public $totalQuantity = 0.0;
 		/**
 		* @var string Text that describes any information associated with the quote
 		*/

@@ -13,62 +13,65 @@
     *
     *An example of the Delivery Notice Ecommerce Standards document in its JSON serialised form
     *@code
-    *{
-    *	"version": 1.3,
-    *	"resultStatus": "1",
-    *	"message": "The delivery notice data has been successfully obtained.",
-    *	"configs": {},
-    *	"dataTransferMode": "COMPLETE",
-    *	"totalDataRecords": 2,
-    *	"dataRecords": [{
-    *		"keyDeliveryNoticeID": "123"
-    *	},
-    *	{
-    *		"keyDeliveryNoticeID": "2231321",
-    *		"deliveryNoticeCode": "DEL-123",
-    *		"deliveryStatus": "IN_TRANSIT",
-    *		"deliveryStatusMessage": "The ordered goods have left the warehouse and are in transit.",
-    *		"language": "EN_AU",
-    *		"packedDate": 1448130083084,
-    *		"loadedDate": 1449131083084,
-    *		"dispatchedDate": 1450132083084,
-    *		"deliveryDate": 1450133083084,
-    *		"receivedDate": 0,
-    *		"deliveredDate": 0,
-    *		"unpackedDate": 0,
-    *		"lostDate": 0,
-    *		"damagedDate": 0,
-    *		"atGeographicLocation": "Y",
-    *		"locationLatitude": -37.8102907,
-    *		"locationLongitude": 144.9608443,
-    *		"instructions": "Please leave the goods at the back door",
-    *		"freightCarrierCode": "ACME-F",
-    *		"freightCarrierName": "Acme Freight Carrier",
-    *		"freightSystemRefCode": "334234-23423-234-343242",
-    *		"freightCarrierConsignCode": "34423423424",
-    *		"freightCarrierTrackingCode": "767567-56765-5676567",
-    *		"freightCarrierServiceCode": "ROUTING-FREIGHT",
-    *		"freightCarrierAccountCode": "FREI-1234",
-    *		"isDropship": "N",
-    *		"lines": [{
-    *			"keyDeliveryNoticeLineID": "123"
-    *		},
-    *		{
-    *			"keyDeliveryNoticeLineID": "456",
-    *			"deliveryLineCode": "DEL-LINE-001",
-    *			"invoiceCode": "INV-123",
-    *			"invoiceLineCode": "INV-LINE-001",
-    *			"purchaseOrderLineCode": "PO-LINE-3",
-    *			"purchaseOrderLineNumber": "3",
-    *			"keySellUnitID": "EACH",
-    *			"keyProductID": "123",
-    *			"productCode": "SWISH-123",
-    *			"productName": "Swisho Paper A4",
-    *			"customerProductCode": "PAPER-A4-SWISHO",
-    *			"quantityDelivered": 5
-    *		}]
-    *	}]
-    *}
+	* {
+	* 	"resultStatus": "1",
+	* 	"message": "The delivery notice data has been successfully obtained.",
+	* 	"configs": {},
+	* 	"dataTransferMode": "COMPLETE",
+	* 	"version": 1.4,
+	* 	"totalDataRecords": 2,
+	* 	"dataRecords": [{
+	* 		"keyDeliveryNoticeID": "123"
+	* 	},
+	* 	{
+	* 		"keyDeliveryNoticeID": "2231321",
+	* 		"deliveryNoticeCode": "DEL-123",
+	* 		"deliveryStatus": "IN_TRANSIT",
+	* 		"deliveryStatusMessage": "The ordered goods have left the warehouse and are in transit.",
+	* 		"keyCustomerAccountID": "222",
+	* 		"keySupplierAccountID": "",
+	* 		"language": "EN_AU",
+	* 		"packedDate": 1448130083084,
+	* 		"loadedDate": 1449131083084,
+	* 		"dispatchedDate": 1450132083084,
+	* 		"deliveryDate": 1450133083084,
+	* 		"receivedDate": 0,
+	* 		"deliveredDate": 0,
+	* 		"unpackedDate": 0,
+	* 		"lostDate": 0,
+	* 		"damagedDate": 0,
+	* 		"cancelledDate": 0,
+	* 		"atGeographicLocation": "Y",
+	* 		"locationLatitude": -37.8102907,
+	* 		"locationLongitude": 144.9608443,
+	* 		"instructions": "Please leave the goods at the back door",
+	* 		"freightCarrierCode": "ACME-F",
+	* 		"freightCarrierName": "Acme Freight Carrier",
+	* 		"freightSystemRefCode": "334234-23423-234-343242",
+	* 		"freightCarrierConsignCode": "34423423424",
+	* 		"freightCarrierTrackingCode": "767567-56765-5676567",
+	* 		"freightCarrierServiceCode": "ROUTING-FREIGHT",
+	* 		"freightCarrierAccountCode": "FREI-1234",
+	* 		"isDropship": "N",
+	* 		"lines": [{
+	* 			"keyDeliveryNoticeLineID": "123"
+	* 		},
+	* 		{
+	* 			"keyDeliveryNoticeLineID": "456",
+	* 			"deliveryLineCode": "DEL-LINE-001",
+	* 			"invoiceCode": "INV-123",
+	* 			"invoiceLineCode": "INV-LINE-001",
+	* 			"purchaseOrderLineCode": "PO-LINE-3",
+	* 			"purchaseOrderLineNumber": "3",
+	* 			"keySellUnitID": "EACH",
+	* 			"keyProductID": "123",
+	* 			"productCode": "SWISH-123",
+	* 			"productName": "Swisho Paper A4",
+	* 			"customerProductCode": "PAPER-A4-SWISHO",
+	* 			"quantityDelivered": 5
+	* 		}]
+	* 	}]
+	* }
 	*/
 	class ESDocumentDeliveryNotice extends ESDocument implements \JsonSerializable
 	{

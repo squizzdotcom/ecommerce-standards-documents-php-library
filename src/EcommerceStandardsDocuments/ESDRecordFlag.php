@@ -7,38 +7,38 @@
 	*/
 	namespace EcommerceStandardsDocuments;
 	use EcommerceStandardsDocuments\ESDocumentConstants;
-	
+
 	/**
-	* Ecommerce Standard Document that holds details of a record associated to a payment made by a customer account
+	* Ecommerce Standards Record that holds data for a single type of flag. A flag can allow different entities (such as products) to be marked, allowing them to be highlighted, given additional meaning, or extra importance.
 	*/
-	class ESDRecordCustomerAccountPaymentRecord   
+	class ESDRecordFlag
 	{
 		/**
-		* @var string Key that allows the record of the customer account payment to be uniquely identified and linked to.
+		* @var string Key of the general ledger account record to be uniquely identified and linked to.
 		*/
-		public $keyCustomerAccountPaymentRecordID = "";
+		public $keyGLAccountID = "";
+
+		/**
+		* @var string Key that allows the flag record to be uniquely identified and linked to.
+		*/
+        public $keyFlagID = "";
+
+        /**
+		* @var string Code of the flag.  May or may not be a unqiue identifier.
+		*/
+        public $flagCode = "";
+
+        /**
+		* @var string Name of the flag.
+		*/
+        public $flagName = "";
+
+        /**
+		* @var string Description of the flag. May contain any text used to describe the flag.
+		*/
+		public $description = "";
 		
 		/**
-		* @var string Key of the record linked to the payment. This would typically be the key of an invoice or order record.
-		*/
-		public $keyRecordID = "";
-		
-		/**
-		* @var string ID the the record. This would typically be the ID of an invoice or order record.
-		*/
-        public $recordID = "";
-        
-        /**
-		* @var double Monetary amount applied against the record
-		*/
-        public $amount = 0.0;
-        
-        /**
-		* @var string The type of record that the payment is applied to. The field must be set to one of the ESDRecordCustomerAccountPayment class's constants prefixed by PAYMENT_METHOD_
-		*/
-        public $recordType = "";
-        
-        /**
 		* @var int Data Record OPeration. Denotes an operation that may need to be performed on the record when it is being processed.
 		* Set null, or set it to one of the ESD_RECORD_OPERATION constants in the ESDocumentConstants class to allow the record to be inserted, updated, deleted, or ignored.
 		*/
@@ -48,28 +48,5 @@
 		* @var string Stores an identifier that is relevant only to the system referencing and storing the record for its own needs.
 		*/
 		public $internalID = "";
-		
-		/**
-		* sets default values for members that have no values 
-		*/
-		public function setDefaultValuesForNullMembers()
-		{
-			
-		
-			if ($this->keyRecordID == null)
-			{
-				$this->keyRecordID = "";
-			}
-			
-			if ($this->recordID == null)
-			{
-				$this->recordID = "";
-			}
-			
-			if ($this->recordType == null)
-			{
-				$this->recordType = "";
-			}
-		}
 	}
 ?>
