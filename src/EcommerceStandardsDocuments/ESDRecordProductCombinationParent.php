@@ -31,7 +31,7 @@
 		/**
 		* @var int Index of the product combinations list that denotes the combination that is the default. The default may be set when initially viewing a combination product as the default child product option(s)
 		*/
-		public $defaultCombination = DEFAULT_COMBINATION_NOT_SET;
+		public $defaultCombination = self::DEFAULT_COMBINATION_NOT_SET;
 
 		/**
 		* @var string Stores an identifier that is relevant only to the system referencing and storing the record for its own needs.

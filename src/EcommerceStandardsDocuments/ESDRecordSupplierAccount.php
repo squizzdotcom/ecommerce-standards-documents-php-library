@@ -44,7 +44,7 @@
 		const ACCOUNT_PAYMENT_TERMS_NA = "MA";
 	
 		/**
-		* @var string @var Key that allows the supplier account record to be uniquely identified and linked to. In other records it may be referred to keyAccountID where appropriate.
+		* @var string Key that allows the supplier account record to be uniquely identified and linked to. In other records it may be referred to keyAccountID where appropriate.
 		*/
 		public $keySupplierAccountID = "";
 
