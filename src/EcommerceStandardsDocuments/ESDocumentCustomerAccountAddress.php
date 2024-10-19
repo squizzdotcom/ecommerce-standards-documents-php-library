@@ -15,7 +15,7 @@
 	* 
 	*@code 
 	*{
-	*	"version": 1.4,
+	*	"version": 1.5,
 	*	"resultStatus":"1",
 	*	"message":"The customer account address data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyAddressID,keyCustomerAccountID,description,orgName,contact,phone,fax,address1,address2,address3,region,country,postcode,freightCode,isPrimary,isDelivery"},

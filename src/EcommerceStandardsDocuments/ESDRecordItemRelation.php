@@ -1,4 +1,5 @@
 <?php
+
 	/**
 	* Copyright (C) Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -9,40 +10,52 @@
 	use EcommerceStandardsDocuments\ESDocumentConstants;
 
 	/**
-	* Ecommerce Standards record that contains data for a single category tree. A category tree represents an overall hierarchical collection of categories, used to navigate and find associated products, maker models etc.. assigned to each category.
+	* Ecommerce Standards Record that holds data for a single relation between items. Each record links one product, labour, or download record to another product, labour, or download record
 	*/
-	class ESDRecordCategoryTree   
+	class ESDRecordItemRelation
 	{
 		/**
-		* @var string Key that allows the category record to be uniquely identified and linked to.
+		* @var string Key of the product record
 		*/
-        public $keyCategoryTreeID = "";
-
-        /**
-		* @var string Code of the category tree. May or may not be a unqiue identifier.
-		*/
-        public $categoryTreeCode = "";
-
-        /**
-		* @var string Name of the category tree.
-		*/
-        public $name = "";
-
-        /**
-		* @var string Description field of the category tree. It may contain any text used to describe the category tree.
-		*/
-        public $description = "";
-
-        /**
-		* @var string Number to order the category tree by. This may be used to order a number of category trees that appear within a list.
-		*/
-        public $ordering = 0;
+		public $keyProductID = "";
 
 		/**
-		* @var string Either 'N'-No or 'Y'-Yes. If 'Y' then indicates that the category tree is used for navigation of maker/model data, and grouping of products assigned to each model through the tree's catgories.
+		* @deprecated use keyAssetID instead
+		* @var string Key of the download record
 		*/
-		public $isMakerModelCategoryTree = "";
+		public $keyDownloadID = "";
+		
+		/**
+		* @var string Key of the asset record
+		*/
+		public $keyAssetID = "";
 
+		/**
+		* @var string Key of the labour record
+		*/
+		public $keyLabourID = "";
+
+		/**
+		* @var string Key of the product record that is related
+		*/
+		public $keyRelatedProductID = "";
+
+		/**
+		* @deprecated use keyRelatedAssetID instead
+		* @var string Key of the download record that is related
+		*/
+		public $keyRelatedDownloadID = "";
+			
+		/**
+		* @var string Key of the asset record that is related
+		*/
+		public $keyRelatedAssetID = "";
+
+		/**
+		* @var string Key of the labour record that is related
+		*/
+		public $keyRelatedLabourID = "";
+		
 		/**
 		* @var int Data Record OPeration. Denotes an operation that may need to be performed on the record when it is being processed.
 		* Set null, or set it to one of the ESD_RECORD_OPERATION constants in the ESDocumentConstants class to allow the record to be inserted, updated, deleted, or ignored.

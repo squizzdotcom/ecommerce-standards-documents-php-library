@@ -19,7 +19,8 @@
 		public $keyProductID = "";
 
 		/**
-		* @var string Key of the download record that the attribute value is set for.
+		* @deprecated use keyAssetID instead
+		* @var string Deprecated, use keyAssetID instead. Key of the download record that the attribute value is set for.
 		*/
 		public $keyDownloadID = "";
 
@@ -27,6 +28,11 @@
 		* @var string Key of the labour record that the attribute value is set for.
 		*/
 		public $keyLabourID = "";
+
+        /**
+		* @var string Key of the asset record that the attribute value is set for.
+		*/
+        public $keyAssetID = "";
 
 		/**
 		* @var string Key of the location record that the attribute value is set for.

@@ -35,9 +35,15 @@
 		public $keyProductID = "";
 
 		/**
+		* @deprecated use keyAssetID instead
 		* @var string Key of the download record that links the price to a download
 		*/
 		public $keyDownloadID = "";
+
+		/**
+		* @var string Key of the asset record that links the price to the asset
+		*/
+		public $keyAssetID = "";
 
 		/**
 		* @var string Key of the labour record that links the price to labour

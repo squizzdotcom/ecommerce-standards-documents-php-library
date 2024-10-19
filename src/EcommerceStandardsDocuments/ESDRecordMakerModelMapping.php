@@ -29,14 +29,20 @@
 		public $keyProductID = "";
 		
 		/**
-		* @var string Key of the Labour record that the flag is assigned to.
+		* @var string Key of the Labour record that the maker model mapping is assigned to.
 		*/
 		public $keyLabourID = "";
 		
 		/**
-		* @var string Key of the Download record that the flag is assigned to.
+		* @deprecated use keyAssetID instead
+		* @var string Key of the Download record that the maker model mapping is assigned to.
 		*/
 		public $keyDownloadID = "";
+
+		/**
+		* @var string Key of the Asset record that the maker model mapping is assigned to.
+		*/
+		public $keyAssetID = "";
 		
 		/**
 		* @var double Quantity of the product assigned to the model for the given category. The default is 1 if the quantity has not been set.

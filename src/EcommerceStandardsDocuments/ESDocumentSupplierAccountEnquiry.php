@@ -13,7 +13,7 @@
 	* An example of the Supplier Account Enqury Standards document in its JSON serialised form, displaying a list of purchase orders for a supplier account
 	* @code 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The supplier account enquiry purchase order data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",

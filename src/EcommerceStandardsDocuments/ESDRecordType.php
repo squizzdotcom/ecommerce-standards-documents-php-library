@@ -14,6 +14,7 @@
 	class ESDRecordType
 	{
 		const ALTERNATE_CODE = 1;
+		const ASSET = 80;
 		const ATTACHMENT = 2;
 		const ATTRIBUTE = 3;
 		const ATTRIBUTE_PROFILE = 4;

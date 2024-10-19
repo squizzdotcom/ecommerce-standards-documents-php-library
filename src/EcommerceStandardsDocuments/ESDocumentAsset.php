@@ -1,5 +1,4 @@
 <?php
-
 	/**
 	* Copyright (C) Squizz PTY LTD
 	* This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
@@ -10,28 +9,28 @@
 	use EcommerceStandardsDocuments\ESDocument;
 
 	/**
-	* Ecommerce standards document that contains a list of product records
-	* An example of the Product Ecommerce Standards document in its JSON serialised form
+	* Ecommerce standards document that contains a list of asset component records, that define the relationships between assets, and the components that make up an asset.
+	* An example of the Asset Component Ecommerce Standards document in its JSON serialised form
 	* @code 
 	* {
 	*     "version": 1.5,
 	*     "resultStatus": 1,
-	*     "message":"The product data has been successfully obtained.",
+	*     "message":"The asset data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
 	*     "totalDataRecords": 2,
-	*     "configs":{"dataFields":"keyProductID,productCode,keyTaxcodeID,productSearchCode,barcode,barcodeInner,brand,name,description1,description2,description3,description4,productClass,keySellUnitID,unit,weight,width,height,depth,averageCost,warehouse,supplier,deliveryTimeNoStock,deliveryTimeInStock,stockQuantity,stockNoneQuantity,stockLowQuantity,stockLowQuantity,isPriceTaxInclusive,isKitted,kitProductsSetPrice"},
+	*     "configs":{"dataFields":"keyAssetID,assetCode,keyTaxcodeID,assetSearchCode,barcode,barcodeInner,brand,name,description1,description2,description3,description4,assetClass,keySellUnitID,unit,weight,width,height,depth,widthUnitMeasureCode,heightUnitMeasureCode,depthUnitMeasureCode,weightUnitMeasureCode,isPriceTaxInclusive,isKitted,kitAssetsSetPrice"},
 	*     "dataRecords":
 	*      [
 	*         {
-	*             "keyProductID":"123A",
-	*             "productCode":"PROD-123",
+	*             "keyAssetID":"123A",
+	*             "assetCode":"ASSET-123",
 	*             "keyTaxcodeID":"FREE"
 	*         },
 	*         {
-	*             "keyProductID":"1234",
-	*             "productCode":"PROD-001",
+	*             "keyAssetID":"1234",
+	*             "assetCode":"ASSET-001",
 	*             "keyTaxcodeID":"GST",
-	*             "productSearchCode":"Green-Recycled-Paper-Swisho",
+	*             "assetSearchCode":"Green-Recycled-Paper-Swisho",
 	*             "barcode":"03423404230",
 	*             "barcodeInner":"234234",
 	*             "brand":"Swisho Paper",
@@ -40,7 +39,7 @@
 	*             "description2":"Paper built strong and tough by Swisho",
 	*             "description3":"Recommended to be used with dark inks.",
 	*             "description4":"",
-	*             "productClass":"paper",
+	*             "assetClass":"paper",
 	*             "unit":"REAM",
 	*             "weight": 20.1,
 	*             "width": 21,
@@ -50,24 +49,12 @@
 	*             "heightUnitMeasureCode": "CM",
 	*             "depthUnitMeasureCode": "CM",
 	*             "weightUnitMeasureCode": "KG",
-	*             "averageCost": 10.00,
-	*             "warehouse":"Swisho Warehouse",
-	*             "supplier":"Swisho",
-	*             "deliveryTimeNoStock": 112112,
-	*             "deliveryTimeInStock": 1212,
-	*             "stockQuantity": 200,
-	*             "stockNoneQuantity": 0,
-	*             "stockLowQuantity": 10,
 	*             "isPriceTaxInclusive": "N",
-	*             "isKitted":"N",
-	*             "kitProductsSetPrice":"N",
 	*             "keySellUnitID": 2,
 	*             "ordering": 1,
 	*             "sellUnits":[
 	*                 {
 	*                     "keySellUnitID":"2",
-	*                     "minOrderQuantity": 1,
-	*                     "incrementOrderQuantity": 1,
 	*                     "weight": 1.2,
 	*                     "width": 6.1,
 	*                     "height": 4.4,
@@ -80,61 +67,36 @@
 	*                     "heightUnitMeasureCode":"CM",
 	*                     "depthUnitMeasureCode":"CM",
 	*                     "weightUnitMeasureCode":"KG"
-	*                 },
-	*                 {
-	*                     "keySellUnitID":"3",
-	*                     "keySellUnitParentID":"2",
-	*                     "baseQuantity": 6,
-	*                     "minOrderQuantity": 2,
-	*                     "incrementOrderQuantity": 2,
-	*                     "weight": 7.3,
-	*                     "width": 6.1,
-	*                     "height": 4.4,
-	*                     "depth": 14,
-	*                     "packageWeight": 14.7,
-	*                     "packageWidth": 8.0,
-	*                     "packageHeight": 9.2,
-	*                     "packageDepth": 70.2,
-	*                     "widthUnitMeasureCode":"CM",
-	*                     "heightUnitMeasureCode":"CM",
-	*                     "depthUnitMeasureCode":"CM",
-	*                     "weightUnitMeasureCode":"KG"
-	*                 },
-	*                 {
-	*                     "keySellUnitID":"4",
-	*                     "keySellUnitParentID":"3",
-	*                     "baseQuantity": 24,
-	*                     "parentQuantity": 4
 	*                 }
 	*             ]
 	*         }
 	*     ]
 	* }
 	*/
-	class ESDocumentProduct extends ESDocument implements \JsonSerializable
+	class ESDocumentAsset extends ESDocument implements \JsonSerializable
 	{
 		/**
-		* @var ESDRecordProduct[] List of product records
+		* @var ESDRecordAsset[] List of asset records
 		*/
 		public $dataRecords = array();
 		
 		/**
 		* Constructor
 		* 
-		*  @param resultStatus 		int						status of obtaining the sales order data
+		*  @param resultStatus 		int						status of obtaining the asset data
 		*  @param message 			string					message to accompany the result status
-		*  @param productRecords	ESDRecordProduct[]		list of product records
+		*  @param assetRecords		ESDRecordAsset[]		list of asset records
 		*  @param configs 			array					A list of key value pairs that contain additional information about the document.
 		*/
-		public function __construct($resultStatus = 0, $message = "", $productRecords = array(), $configs = array())
+		public function __construct($resultStatus = 0, $message = "", $assetRecords = array(), $configs = array())
 		{
 			$this->resultStatus = $resultStatus;
 			$this->message = $message;
-			$this->dataRecords = $productRecords;
+			$this->dataRecords = $assetRecords;
 			$this->configs = $configs;
-			if ($productRecords != null)
+			if ($assetRecords != null)
 			{
-				$this->totalDataRecords = count($productRecords);
+				$this->totalDataRecords = count($assetRecords);
 			}
 		}
 		

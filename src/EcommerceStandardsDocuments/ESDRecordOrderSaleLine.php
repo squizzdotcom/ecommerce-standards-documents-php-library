@@ -280,29 +280,60 @@
 		public $weightUnitMeasureCode = "";
 
 		/**
+		* @deprecated
 		* @var string Key of the download record associated to the line. Only relevent when the lineType has been  to download
 		*/
 		public $keyDownloadID = "";
 
 		/**
+		* @deprecated
 		* @var string Code the download in the line.
 		*/
 		public $downloadCode = "";
 
 		/**
+		* @deprecated
 		* @var string name the download in the line.
 		*/
 		public $downloadName = "";
 
 		/**
+		* @deprecated
 		* @var string description the download in the line.
 		*/
 		public $downloadDescription = "";
 
 		/**
+		* @deprecated
 		* @var string code of the download in the purchase order associated to the sales order
 		*/
 		public $purchaseOrderDownloadCode = "";
+
+		// asset fields
+		/**
+		* @var string Key of the asset record associated to the line. Only relevent when the lineType has been set to asset
+		*/
+        public $keyAssetID = "";
+		
+		/**
+		* @var string Code the asset in the line.
+		*/
+        public $assetCode = "";
+
+		/**
+		* @var string name the asset in the line.
+		*/
+        public $assetName = "";
+
+		/**
+		* @var string the asset in the line.
+		*/
+        public $assetDescription = "";
+
+		/**
+		* @var string code of the asset in the purchase order associated to the sales order
+		*/
+        public $purchaseOrderAssetCode = "";
 
 		/**
 		* @var string Key of the labour record associated to the line. Only relevent when the lineType has been  to labour
@@ -583,6 +614,31 @@
 			if ($this->purchaseOrderDownloadCode == null)
 			{
 				$this->purchaseOrderDownloadCode = "";
+			}
+
+			if ($assetCode == null)
+			{
+				$this->assetCode = "";
+			}
+
+			if ($keyAssetID == null)
+			{
+				$this->keyAssetID = "";
+			}
+
+			if ($assetName == null)
+			{
+				$this->assetName = "";
+			}
+
+			if ($assetDescription == null)
+			{
+				$this->assetDescription = "";
+			}
+			
+			if ($purchaseOrderAssetCode == null)
+			{
+				$this->purchaseOrderAssetCode = "";
 			}
 			
 			if ($this->keyLabourID == null)

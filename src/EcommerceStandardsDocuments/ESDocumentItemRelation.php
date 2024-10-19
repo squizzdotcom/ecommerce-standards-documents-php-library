@@ -9,50 +9,46 @@
 	use EcommerceStandardsDocuments\ESDocument;
 
 	/**
-	* Ecommerce standards document that contains a list of surcharge records
-	* An example of the Surcharge Ecommerce Standards document in its JSON serialised form
+	* Ecommerce standards document that contains a list of item relation records
+	* An example of the item relation Ecommerce Standards document in its JSON serialised form
 	* 
 	*@code 
-	*{
-	*	"version": 1.5,
-	*	"resultStatus":"1",
-	*	"message":"The surcharge data has been successfully obtained.",
-	*	"configs":{"dataFields":"keySurchargeID,surchargeCode,surchargeLabel,description,surchargeType"},
-	*	"dataTransferMode": "COMPLETE",
-	*	"totalDataRecords": 4,
-	*	"dataRecords":
-	*	[
-	*		{
-	*			"keySurchargeID":"123"
-	*		},
-	*		{
-	*			"keySurchargeID":"456",
-	*			"surchargeCode": "WEB_FREIGHT",
-	*			"surchargeLabel":"Web Order Freight",
-	*			"description": "Costs to deliver orders created through the website.",
-	*			"surchargeType": "FREIGHT"
-	*		},
-	*		{
-	*			"keySurchargeID":"765",
-	*			"surchargeCode": "WEB_CC_SURCHARGE",
-	*			"surchargeLabel": "Web Credit Card Surcharge",
-	*			"description": "Transaction cost for payment made by credit card.",
-	*			"surchargeType": "CREDITCARD"
-	*		},
-	*		{
-	*			"keySurchargeID":"6765",
-	*			"surchargeCode": "WEB_MIN_ORDER",
-	*			"surchargeLabel": "Web Minimum Order Surcharge",
-	*			"description": "Cost to handle orders when an order's total price is under the allowed minimum.",
-	*			"surchargeType": "MINORDER"
-	*		}
-	*	]
-	*}
+	* {
+	*      "version": 1.5,
+	*      "resultStatus": 1,
+	*      "message":"The item relation data has been successfully obtained.",
+	*      "dataTransferMode": "COMPLETE",
+	*      "totalDataRecords": 4,
+	*      "configs":{"dataFields":"keyProductID,keyDownloadID,keyLabourID,keyAssetID,keyRelatedDownloadID,keyRelatedProductID,keyRelatedLabourID,keyRelatedAssetID"},
+	*      "dataRecords":
+	*       [
+	*          {
+	*              "keyProductID":"123",
+	*              "keyRelatedProductID":"456"
+	*          },
+	*          {
+	*              "keyProductID":"123",
+	*              "keyRelatedDownloadID": "DWN1"
+	*          },
+	*          {
+	*              "keyDownloadID":"DWN1",
+	*              "keyRelatedLabourID": "LAB2"
+	*          },
+	*          {
+	*              "keyLabourID":"LAB1",
+	*              "keyRelatedProductID": "123"
+	*          },
+	*          {
+	*              "keyAssetID":"ASSET1",
+	*              "keyRelatedAssetID": "ASSET323"
+	*          }
+	*      ]
+	*  }
 	*/
-	class ESDocumentSurcharge extends ESDocument implements \JsonSerializable
+	class ESDocumentItemRelation extends ESDocument implements \JsonSerializable
 	{
 		/**
-		* @var ESDRecordSurcharge[] List of surcharge records
+		* @var ESDRecordItemRelation[] list of item relation records
 		*/
 		public $dataRecords = array();
 		
@@ -61,18 +57,18 @@
 		* 
 		*  @param resultStatus 						int						status of obtaining the document's data
 		*  @param message 							string					message to accompany the result status
-		*  @param surchargeRecords					ESDRecordSurcharge[]	list of surcharge records
+		*  @param imageRecords						ESDRecordItemRelation[]	list of item relation records
 		*  @param configs 							array					A list of key value pairs that contain additional information about the document.
 		*/
-		public function __construct($resultStatus = 0, $message = "", $surchargeRecords = array(), $configs = array())
+		public function __construct($resultStatus = 0, $message = "", $itemRelationRecords = array(), $configs = array())
 		{
 			$this->resultStatus = $resultStatus;
 			$this->message = $message;
-			$this->dataRecords = $surchargeRecords;
+			$this->dataRecords = $itemRelationRecords;
 			$this->configs = $configs;
-			if ($surchargeRecords != null)
+			if ($itemRelationRecords != null)
 			{
-				$this->totalDataRecords = count($surchargeRecords);
+				$this->totalDataRecords = count($itemRelationRecords);
 			}
 		}
 		

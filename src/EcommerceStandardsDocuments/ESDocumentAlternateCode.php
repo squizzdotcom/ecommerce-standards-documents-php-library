@@ -15,7 +15,7 @@
 	* 
 	*@code 
 	*{
-	*	"version": 1.4,
+	*	"version": 1.5,
 	*	"resultStatus":"1",
 	*	"message":"The product alternate code data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyProductID,alternateCode,isUseCode,isSupplierCode"},

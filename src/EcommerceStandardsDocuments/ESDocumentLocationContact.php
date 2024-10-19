@@ -9,39 +9,49 @@
 	use EcommerceStandardsDocuments\ESDocument;
 
 	/**
-	* Ecommerce standards document that contains a list of image file records associated with products, downloads, labour, categories, category trees, makers or maker models
-	* An example of the Image Ecommerce Standards document in its JSON serialised form
-	* 
-	*@code 
+	* Ecommerce standards document that holds a list of contacts records that are associated to locations. These are the people who are linked or can be found at the location.
+	* An example of the Location Contact Ecommerce Standards document in its JSON serialised form
 	* {
 	*     "version": 1.5,
 	*     "resultStatus": 1,
-	*     "message":"The product image data has been successfully obtained.",
-	*     "dataTransferMode": "COMPLETE",
+	*     "message":"The location contact data has been successfully obtained.",
 	*     "totalDataRecords": 2,
-	*     "configs":{"dataFields":"keyProductImageID,keyProductID,imageFullFilePath,imageFileName,imageFileExtension,title,description"},
+	*     "dataTransferMode": "COMPLETE",
+	*     "configs":{"dataFields":"keyContactID,keyLocationID,contactCode,title,name1,name2,name3,email,phone1,phone2,phone3,fax,website,orgName,orgPosition,isPrimary,allowMarketing,marketingCategoryCodes,authCode"},
 	*     "dataRecords":
-	*     [
+	*      [
 	*         {
-	*             "keyProductImageID":"11",
-	*             "keyProductID":"PROD-123"
+	*             "keyContactID":"CON1",
+	*             "keyLocationID":"1",
 	*         },
 	*         {
-	*             "keyProductImageID":"22",
-	*             "keyProductID":"PROD-456",
-	*             "imageFullFilePath":"C://location/to/the/product/images/Image-PROD-456.jpg",
-	*             "imageFileName":"Image-PROD-456",
-	*             "imageFileExtension":"jpg",
-	*             "title":"Black Lounge Chair Front View",
-	*             "description":"View from the front the quality styling of this modern lounge chair."
+	*             "keyContactID":"2",
+	*             "keyLocationID":"2",
+	*             "contactCode":"JD123",
+	*             "title":"Mr",
+	*             "name1":"John",
+	*             "name2":"Wilbur",
+	*             "name3":"Smith",
+	*             "email":"personal@test.com",
+	*             "phone1":"+6112341231",
+	*             "phone2":"+6112341232",
+	*             "phone3":"+6112341233",
+	*             "fax":"+6112341234",
+	*             "website":"www.squizz.com/esd/index.html",
+	*             "orgName":"Squizz Pty Ltd",
+	*             "orgPosition":"Service Centre Coordinator",
+	*             "isPrimary":"Y",
+	*             "allowMarketing": "Y",
+	*             "marketingCategoryCodes": ["VIP","LATEST-NEWS-EVENTS","NEW-SALES"],
+	*             "authCode":"c0nt@ct-X@amp^le-password"
 	*         }
 	*     ]
 	* }
 	*/
-	class ESDocumentImage extends ESDocument implements \JsonSerializable
+	class ESDocumentLocationContact extends ESDocument implements \JsonSerializable
 	{
 		/**
-		* @var ESDRecordImage[] List of Image records. The data records property must be the last property in the JSON data when serialised.
+		* @var ESDRecordContact[] List of contact records.
 		*/
 		public $dataRecords = array();
 		
@@ -50,18 +60,18 @@
 		* 
 		*  @param resultStatus 						int						status of obtaining the document's data
 		*  @param message 							string					message to accompany the result status
-		*  @param imageRecords						ESDRecordImage[]		list of image records
+		*  @param contactRecords					ESDRecordContact[]		list of contact records
 		*  @param configs 							array					A list of key value pairs that contain additional information about the document.
 		*/
-		public function __construct($resultStatus = 0, $message = "", $imageRecords = array(), $configs = array())
+		public function __construct($resultStatus = 0, $message = "", $contactRecords = array(), $configs = array())
 		{
 			$this->resultStatus = $resultStatus;
 			$this->message = $message;
-			$this->dataRecords = $imageRecords;
+			$this->dataRecords = $contactRecords;
 			$this->configs = $configs;
-			if ($imageRecords != null)
+			if ($contactRecords != null)
 			{
-				$this->totalDataRecords = count($imageRecords);
+				$this->totalDataRecords = count($contactRecords);
 			}
 		}
 		

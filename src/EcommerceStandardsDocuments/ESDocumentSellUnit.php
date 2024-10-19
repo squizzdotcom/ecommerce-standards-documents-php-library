@@ -16,7 +16,7 @@
 	* 
 	* @code 
 	* {
-	*	"version": 1.4,
+	*	"version": 1.5,
 	*	"resultStatus":"1",
 	*	"message":"The sell unit data has been successfully obtained.",
 	*	"configs":{"dataFields":"keySellUnitID,sellUnitCode,sellUnitLabel,isBaseUnit,baseQuantity,parentQuantity,keySellUnitParentID"},

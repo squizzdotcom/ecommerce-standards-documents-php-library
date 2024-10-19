@@ -18,7 +18,7 @@
 	* 	"message": "The delivery notice data has been successfully obtained.",
 	* 	"configs": {},
 	* 	"dataTransferMode": "COMPLETE",
-	* 	"version": 1.4,
+	* 	"version": 1.5,
 	* 	"totalDataRecords": 2,
 	* 	"dataRecords": [{
 	* 		"keyDeliveryNoticeID": "123"

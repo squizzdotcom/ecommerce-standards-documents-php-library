@@ -29,39 +29,69 @@
 		public $keyLabourID = "";
 
 		/**
-		* @var double Unit quantity of stock available to be purchased
+		* @var double Base unit quantity of stock available to be purchased
 		*/
 		public $qtyAvailable = 0.0;
 
 		/**
-		* @var double Unit quantity of stock on hand at its location
+		* @var double Base unit quantity of stock on hand at its location
 		*/
 		public $qtyOnHand = 0.0;
 
 		/**
-		* @var double Unit quantity of stock that has been ordered by a purchaser
+		* @var double Base unit quantity of stock that has been ordered by a purchaser
 		*/
 		public $qtyOrdered = 0.0;
 		
         /**
-		* @var double Unit quantity of stock that is the maximum amount that can be ordered by a purchaser
+		* @var double Base unit quantity of stock that is the maximum amount that can be ordered by a purchaser
 		*/
         public $qtyOrderable = 0.0;
 
 		/**
-		* @var double Unit quantity of stock that has been back ordered from a supplier
+		* @var double Base unit quantity of stock that has been back ordered from a supplier
 		*/
 		public $qtyBackordered = 0.0;
 
 		/**
-		* @var double Unit quantity of stock that has been reserved for given purchasers
+		* @var double Base unit quantity of stock that has been reserved for given purchasers
 		*/
 		public $qtyReserved = 0.0;
 
 		/**
-		* @var double Unit quantity of stock that has been placed at an external location (consigned)
+		* @var double Base unit quantity of stock that has been placed at an external location (consigned)
 		*/
 		public $qtyConsigned = 0.0;
+
+		/**
+		* @var int Date time that indicates when the product's stock has been available or in-stock since. If the product currently has no stock available then ignore setting. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone</summary>
+		*/
+		public $stockAvailableSinceDate = 0;
+		
+		/**
+		* @var int Date time that indicates when the product's stock has been on hand at its location since. If the product currently has no stock on hand then ignore setting. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
+		*/
+		public $stockOnHandSinceDate = 0;
+		
+		/**
+		* @var int Date time that indicates when the product's stock has been on order by purchaser(s) since. If the product currently has no stock on order then ignore setting. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
+		*/
+		public $stockOrderedSinceDate = 0;
+		
+		/**
+		* @var int Date time that indicates when the product's stock has been on back order from supplier(s). If the product currently has no stock on back order then ignore setting. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
+		*/
+		public $stockBackorderedSinceDate = 0;
+		
+		/**
+		* @var int Date time that indicates when the product's stock has been reserved by purchaser(s). If the product currently has no stock reserved then ignore setting. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
+		*/
+		public $stockReservedSinceDate = 0;
+		
+		/**
+		* @var int Date time that indicates when the product's stock has been on consignment for. If the product currently has no stock consigned then ignore setting. Date is in the form of a number in milliseconds since the 01-01-1970 12:00am Epoch in UTC time-zone
+		*/
+		public $stockConsignedSinceDate = 0;
 
 		/**
 		* @var int Data Record OPeration. Denotes an operation that may need to be performed on the record when it is being processed. Set null, or set it to one of the ESD_RECORD_OPERATION constants in the ESDocumentConstants class to allow the record to be inserted, updated, deleted, or ignored.

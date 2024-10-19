@@ -15,7 +15,7 @@
 	* 
 	*@code 
 	*{
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry invoice line data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -61,7 +61,7 @@
 	* An example of the Customer Account Enqury Line Standards document in its JSON serialised form, displaying a list of sales order lines for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus":"1",
 	*     "message":"The customer account enquiry sales order line data has been successfully obtained.",
 	*     "configs":{},
@@ -107,7 +107,7 @@
 	* An example of the Customer Account Enqury Line Standards document in its JSON serialised form, displaying a list of credit lines for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry credit line data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -144,7 +144,7 @@
 	* 
 	* An example of the Customer Account Enqury Line Standards document in its JSON serialised form, displaying a list of payment lines for a customer account
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry payment line data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -174,7 +174,7 @@
 	* An example of the Customer Account Enqury Line Standards document in its JSON serialised form, displaying a list of back order lines for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry back order line data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",

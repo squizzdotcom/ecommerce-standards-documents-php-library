@@ -95,9 +95,15 @@
 		public $keyProductIDs = array();
 
 		/**
+		* @deprecated use keyAssetIDs instead
 		* @var string[] List of Key Download IDs, that link any number of Download records to the category.
 		*/
 		public $keyDownloadIDs = array();
+
+		/**
+		* @var string[] List of Key Asset IDs, that link any number of Asset records to the category.
+		*/
+		public $keyAssetIDs = array();
 
 		/**
 		* @var string[] List of Key Labour IDs, that link any number of Labour records to the category.

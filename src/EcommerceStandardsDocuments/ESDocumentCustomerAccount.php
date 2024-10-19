@@ -15,7 +15,7 @@
 	* 
 	*@code 
 	*{
-	*	"version": 1.4,
+	*	"version": 1.5,
 	*	"resultStatus":"1",
 	*	"message":"The customer account data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyCustomerAccountID,keyPriceLevelID,customerAccountCode,accountName,contactName,orgName,authorityNumbers,authorityNumberLabels,authorityNumberTypes,email,accountClass,paymentTypes,territory,discount,shippingMethod,isOnHold,isOutsideBalance,isOutsideTerms,onHoldAction,outTermsAction,outCreditAction,balance,limit,termsType,termsDescription,termsValue1,termsValue2"},

@@ -19,7 +19,7 @@
 		public $keyProductID = "";
 
 		/**
-		* @var string Key of the download record that the alternate code is assigned to.
+		* @var string Deprecated, use keyAssetID instead. Key of the download record that the alternate code is assigned to.
 		*/
 		public $keyDownloadID = "";
 
@@ -29,9 +29,19 @@
 		public $keyLabourID = "";
 
 		/**
+		* @var string Key of the asset record that the alternate code is assigned to.
+		*/
+    	public $keyAssetID = "";
+
+		/**
 		* @var string Alternate code. May or may not be a unique identifier
 		*/
 		public $alternateCode = "";
+
+		/**
+		* @var string Indicates what type of code the alternate code is. see ALTERNATE_CODE_TYPE constants in the ESDocumentConstants class that contains type of code that can be set
+		*/
+		public $codeType = "";
 
 		/**
 		* @var string Either 'N'-No or 'Y'-Yes. If 'Y' then indicates that the alternate code may be used to directly link to the product, download, or labour.

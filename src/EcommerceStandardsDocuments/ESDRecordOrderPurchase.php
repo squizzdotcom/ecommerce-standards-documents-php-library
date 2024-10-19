@@ -360,6 +360,11 @@
 		* @var string Code of the country at the address that the ordered goods are being delivered to as a 3 digit code  by ISO standards.
 		*/
 		public $deliveryCountryCodeISO3 = "";
+		
+		/**
+		* @var string Code of the purchase order to include in the delivery information, that is contains the code of the purchase order associated to the delivery of the goods
+		*/
+		public $deliveryPurchaseOrderCode = "";
 
 		/**
 		* @var string Description of the address associated with the billing of the order.
@@ -698,6 +703,7 @@
 				'deliveryCountryName' => $this->deliveryCountryName,
 				'deliveryCountryCodeISO2' => $this->deliveryCountryCodeISO2,
 				'deliveryCountryCodeISO3' => $this->deliveryCountryCodeISO3,
+				'deliveryPurchaseOrderCode' => $this->deliveryPurchaseOrderCode,
 				'billingDescription' => $this->billingDescription,
 				'billingContact' => $this->billingContact,
 				'billingOrgName' => $this->billingOrgName,

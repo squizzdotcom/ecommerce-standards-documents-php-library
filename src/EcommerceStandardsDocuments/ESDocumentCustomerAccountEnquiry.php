@@ -14,7 +14,7 @@
 	* 
 	*@code 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry transaction data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -109,7 +109,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of invoices for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry invoice data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -204,7 +204,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single invoice for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry invoice detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -323,7 +323,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of sales orders for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry sales order data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -418,7 +418,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single sales order for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry sales order detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -537,7 +537,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of credits for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry credit data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -602,7 +602,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single credit for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry credit detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -684,7 +684,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of payments for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry payment data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -724,7 +724,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single payment for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry payment detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -776,7 +776,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of back orders for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry back order data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -861,7 +861,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single back order for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry back order detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -971,7 +971,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, displaying a list of quotes for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry quote data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",
@@ -1065,7 +1065,7 @@
 	* An example of the Customer Account Enqury Standards document in its JSON serialised form, containing the detail of a single quote for a customer account
 	* 
 	* {
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The customer account enquiry quote detail data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",

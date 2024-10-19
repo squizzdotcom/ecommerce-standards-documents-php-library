@@ -152,6 +152,11 @@
 		* @var string Post code at the delivery address.
 		*/
         public $deliveryPostcode = "";
+
+		/**
+		* @var string Code of the purchase order to include in the delivery information, that is contains the code of the purchase order associated to the delivery of the goods
+		*/
+		public $deliveryPurchaseOrderCode = "";
         
         /**
 		* @var string Name of the contact person at the address associated with the billing of the credit.

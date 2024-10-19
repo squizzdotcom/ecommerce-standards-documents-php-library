@@ -8,4 +8,4 @@ Note that currently this PHP libary only contains a smaller subset of the classe
 
 - [Documentation](https://www.squizz.com/esd/index.html)
 - [License](LICENSE)
-- Current Library Version 1.4
+- Current Library Version 1.5

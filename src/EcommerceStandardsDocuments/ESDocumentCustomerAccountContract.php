@@ -15,7 +15,7 @@
 	* 
 	*@code 
 	*{
-	*	"version": 1.4,
+	*	"version": 1.5,
 	*	"resultStatus":"1",
 	*	"message":"The customer account contract data has been successfully obtained.",
 	*	"configs":{"dataFields":"keyContractID,contractCode,description,forceContractPrice,type,expireDate"},

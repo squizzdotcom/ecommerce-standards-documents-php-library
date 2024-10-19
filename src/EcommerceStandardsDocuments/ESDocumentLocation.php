@@ -10,7 +10,7 @@
 
 	/**
 	*{
-	*     "version": 1.4,
+	*     "version": 1.5,
 	*     "resultStatus": 1,
 	*     "message":"The location data has been successfully obtained.",
 	*     "dataTransferMode": "COMPLETE",

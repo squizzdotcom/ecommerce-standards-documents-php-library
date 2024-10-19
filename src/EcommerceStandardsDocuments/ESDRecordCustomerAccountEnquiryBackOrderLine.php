@@ -67,6 +67,11 @@
 		* @var double Quantity back ordered for the line.
 		*/
         public $quantityBackordered = 0.0;
+
+		/**
+		* @var double Quantity available to fulfill on the quantity ordered line. This may be used to calculate a percentage of the line ordered in the line that is now available since the back order was first raised.
+		*/
+        public $quantityAvailable = 0.0;
         
         /**
 		* @var double monetary price for a single unit excluding tax amount.

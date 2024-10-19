@@ -24,9 +24,15 @@
 		public $keyProductID = "";
 
 		/**
+		* @deprecated use keyAssetID instead
 		* @var string Key of the download record that the image is set for.
 		*/
 		public $keyDownloadID = "";
+
+		/**
+		* @var string Key of the asset record
+		*/
+		public $keyAssetID = "";
 
 		/**
 		* @var string Key of the labour record that the image is set for.
@@ -46,8 +52,8 @@
 		/**
 		 * @var string Key of the maker/manufacturer model record that the image is set for.
 		 */
-		
 		public $keyMakerModelID = "";
+
 		/**
 		 * @var string Key of the maker/manufacturer that creates or assembles models and products that the image is set for.
 		 */
